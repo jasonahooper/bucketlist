@@ -13,6 +13,10 @@ class DestinationsController < ApplicationController
   def new
   end
 
+  def show
+    @destination = Destination.find(params[:id])
+  end
+
   private
     def destination_params
       params.require(:destination).permit(:name, :image_url, :traveller_id)

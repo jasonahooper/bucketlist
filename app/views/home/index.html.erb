@@ -1,0 +1,13 @@
+<div id="destination-entry">
+  <%= form_for @destination do |f| %>
+    <fieldset>
+      <%= f.label :name %>
+      <%= f.text_field :name %>
+    </fieldset>
+    <fieldset>
+      <%= f.label :image_url, "Image URL" %>
+      <%= f.text_field :image_url %>
+    </fieldset>
+    <%= f.submit "Add" %>
+  <% end %>
+</div>

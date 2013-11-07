@@ -3,13 +3,16 @@ Given(/^that I am signed in$/) do
 end
 
 Given(/^I am on the homepage$/) do
-  get '/'
+  visit root_path
 end
 
 When(/^I add a Destination$/) do
-  pending # express the regexp above with the code you wish you had
+  @country = Faker::Address.country
+  fill_in 'Name', :with => @country
+  fill_in 'Image URL', :with => 'http://lorempixel.com/400/200/'
+  click_button 'Add'
 end
 
 Then(/^I should see my destination appear on the page$/) do
-  pending # express the regexp above with the code you wish you had
+  expect(page).to have_content @country
 end
