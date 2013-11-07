@@ -1,5 +1,5 @@
 <div id="destination-entry">
-  <%= form_for @destination do |f| %>
+  <%= form_for @destination, :remote => true do |f| %>
     <fieldset>
       <%= f.label :name %>
       <%= f.text_field :name %>
@@ -10,4 +10,8 @@
     </fieldset>
     <%= f.submit "Add" %>
   <% end %>
+</div>
+<div id="destination-list">
+  <ol id="destination-list-ol">
+  </ol>
 </div>

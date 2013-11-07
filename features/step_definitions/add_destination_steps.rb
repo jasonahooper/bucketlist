@@ -14,5 +14,6 @@ When(/^I add a Destination$/) do
 end
 
 Then(/^I should see my destination appear on the page$/) do
+  save_and_open_page
   expect(page).to have_content @country
 end
