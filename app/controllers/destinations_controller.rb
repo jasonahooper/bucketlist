@@ -2,7 +2,10 @@ class DestinationsController < ApplicationController
   def create
     @destination = Destination.new(destination_params)
     if @destination.save
-      redirect_to destination_path(@destination)
+      respond_to do |format|
+        format.html {redirect_to destination_path(@destination)}
+        format.js { }
+      end
     else
     end
   end
