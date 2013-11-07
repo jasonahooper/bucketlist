@@ -1,11 +1,11 @@
 <div id="destination-entry">
   <%= form_for @destination, :remote => true do |f| %>
     <fieldset>
-      <%= f.label :name %>
+      <%= f.label :name, "Destination Name" %>
       <%= f.text_field :name %>
     </fieldset>
     <fieldset>
-      <%= f.label :image_url, "Image URL" %>
+      <%= f.label :image_url, "Destination Image URL" %>
       <%= f.text_field :image_url %>
     </fieldset>
     <%= f.submit "Add" %>
