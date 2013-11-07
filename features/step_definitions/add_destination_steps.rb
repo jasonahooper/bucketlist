@@ -3,7 +3,7 @@ Given(/^that I am signed in$/) do
 end
 
 Given(/^I am on the homepage$/) do
-  pending # express the regexp above with the code you wish you had
+  get '/'
 end
 
 When(/^I add a Destination$/) do

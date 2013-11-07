@@ -1,6 +1,6 @@
 Feature: Add Destination
 
-  @wip @javascript
+  @wip
   Scenario: A traveller adds a destination
     Given that I am signed in
     And I am on the homepage
