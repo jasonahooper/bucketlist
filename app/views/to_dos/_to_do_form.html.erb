@@ -1,5 +1,5 @@
 <div class="to-do-entry">
-  <%= form_for [destination, @to_do] do |f| %>
+  <%= form_for [destination, @to_do], :remote => true do |f| %>
     <fieldset>
       <%= f.label :name, "ToDo Name" %>
       <%= f.text_field :name %>

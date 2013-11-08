@@ -10,6 +10,7 @@ When(/^I add a Destination$/) do
   @country = Faker::Address.country
   fill_in 'Destination Name', :with => @country
   fill_in 'Destination Image URL', :with => 'http://lorempixel.com/400/200/'
+  # fill_in 'Destination Image URL', :with => 'image.jpg'
   click_button 'Add Destination'
 end
 

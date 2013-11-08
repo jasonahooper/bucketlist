@@ -1,6 +1,6 @@
 Feature: Add ToDo
 
-  @wip
+  @javascript
   Scenario: A traveller adds a To-Do
     Given that I am signed in
     And I am on the homepage
