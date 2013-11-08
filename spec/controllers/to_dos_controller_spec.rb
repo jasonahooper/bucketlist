@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe ToDoController do
+describe ToDosController do
   context "POST to create" do
     before do
       @valid_params = { :to_do => {

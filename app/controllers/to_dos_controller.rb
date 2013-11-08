@@ -1,4 +1,4 @@
-class ToDoController < ApplicationController
+class ToDosController < ApplicationController
 
   def create
     @to_do = ToDo.new(to_do_params)
@@ -9,6 +9,10 @@ class ToDoController < ApplicationController
       end
     else
     end
+  end
+
+  def show
+    @to_do = ToDo.find(params[:id])
   end
 
   private
