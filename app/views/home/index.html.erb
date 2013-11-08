@@ -1,48 +1,8 @@
-<div id="destination-entry">
-  <%= form_for @destination, :remote => true do |f| %>
-    <fieldset>
-      <%= f.label :name, "Destination Name" %>
-      <%= f.text_field :name %>
-    </fieldset>
-    <fieldset>
-      <%= f.label :image_url, "Destination Image URL" %>
-      <%= f.text_field :image_url %>
-    </fieldset>
-    <%= f.submit "Add Destination" %>
-  <% end %>
-</div>
-<div id="to-do-entry">
-  <%= form_for @to_do do |f| %>
-    <fieldset>
-      <%= f.label :name, "ToDo Name" %>
-      <%= f.text_field :name %>
-    </fieldset>
-    <fieldset>
-      <%= f.label :image_url, "ToDo Image URL" %>
-      <%= f.text_field :image_url %>
-    </fieldset>
-    <fieldset>
-      <%= f.label :priority, "ToDo Priority" %>
-      <%= f.text_field :priority %>
-    </fieldset>
-    <fieldset>
-      <%= f.label :where , "ToDo Where" %>
-      <%= f.text_field :where %>
-    </fieldset>
-    <fieldset>
-      <%= f.label :latitude , "ToDo Latitude" %>
-      <%= f.text_field :latitude %>
-    </fieldset>
-    <fieldset>
-      <%= f.label :longitude , "ToDo Longitude" %>
-      <%= f.text_field :longitude %>
-    </fieldset>
-    <fieldset>
-      <%= f.collection_select :destination_id, @destinations, :id, :name %>
-    <%= f.submit "Add ToDo" %>
-  <% end %>
-</div>
+<%= render 'destinations/destination_form' %>
 <div id="destinations">
   <ul id="destination-list">
+    <% @destinations.each do |d| %>
+      <%= render :partial => 'destinations/destination', :locals => { :destination => d} %>
+    <% end %>
   </ul>
 </div>

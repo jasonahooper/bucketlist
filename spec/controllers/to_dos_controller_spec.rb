@@ -3,14 +3,16 @@ require 'spec_helper'
 describe ToDosController do
   context "POST to create" do
     before do
-      @valid_params = { :to_do => {
+      @destination = Destination.make!
+      @valid_params = { :destination_id => @destination.id,
+        :to_do => {
         :name => 'a test todo',
         :image_url => 'image.jpg',
         :priority => rand(99),
         :where => 'a test location',
         :latitude => Faker::Address.latitude,
         :longitude => Faker::Address.longitude,
-        :destination_id => Destination.make!.id
+        :destination_id => @destination.id
         }
       }
     end
@@ -25,7 +27,7 @@ describe ToDosController do
       end
 
       it "should redirect me to the show page" do
-        expect(response).to redirect_to(to_do_path(assigns(:to_do)))
+        expect(response).to redirect_to(destination_to_do_path(@destination.id, assigns(:to_do)))
       end
     end
 

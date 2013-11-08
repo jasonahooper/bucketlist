@@ -1,5 +1,6 @@
 BucketList::Application.routes.draw do
-  resources :destinations
-  resources :to_dos
+  resources :destinations do
+    resources :to_dos
+  end
   root to: 'home#index'
 end

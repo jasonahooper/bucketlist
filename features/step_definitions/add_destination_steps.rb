@@ -15,4 +15,5 @@ end
 
 Then(/^I should see my destination appear on the page$/) do
   expect(page).to have_content @country
+  page.should have_css("#destination-1")
 end
