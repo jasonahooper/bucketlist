@@ -7,7 +7,7 @@ class CreateToDos < ActiveRecord::Migration
       t.string :where
       t.float :latitude
       t.float :longitude
-      t.integer :destination_id
+      t.integer :destination_id, :default => 2
 
       t.timestamps
     end

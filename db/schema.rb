@@ -28,7 +28,7 @@ ActiveRecord::Schema.define(version: 20131107222341) do
     t.string   "where"
     t.float    "latitude"
     t.float    "longitude"
-    t.integer  "destination_id"
+    t.integer  "destination_id", default: 2
     t.datetime "created_at"
     t.datetime "updated_at"
   end

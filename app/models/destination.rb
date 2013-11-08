@@ -1,4 +1,4 @@
 class Destination < ActiveRecord::Base
   belongs_to :traveller
-  has_many :to_dos
+  has_many :to_dos, :order => :priority
 end
