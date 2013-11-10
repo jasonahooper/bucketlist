@@ -1,1 +1,1 @@
-$("#destination-<%=@to_do.destination_id%>-todos").html("<%= j(render(@to_dos)) %>")
+$("#destination-<%=@to_do.destination_id%>-todos").html("<%= j(render :partial => 'to_dos/to_dos', :locals => { :to_dos => @to_do.destination.to_dos}) %>")
