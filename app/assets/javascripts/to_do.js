@@ -1,2 +1,7 @@
-// Place all the behaviors and hooks related to the matching controller here.
-// All this logic will automatically be available in application.js.
+$(document).ready(function() {
+  $('body').on('click', '.remove-todo', function(clicked) {
+    console.log(clicked);
+//    clicked.currentTarget.parentElement.parentElement.remove()
+    return(false);
+  });
+});
