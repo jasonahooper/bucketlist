@@ -25,6 +25,11 @@ class ToDosController < ApplicationController
         format.html do
           @to_dos = Destination.find(params[:destination_id]).to_dos
         end
+        format.json do
+          binding.pry
+          render :json => Destination.find(params[:destination_id]).
+            to_dos.as_json(:only => [:latitude, :longitude, :name])
+        end
       end
     else
       respond_to do |format|
