@@ -6,7 +6,7 @@ class ToDosController < ApplicationController
     if @to_do.save
       respond_to do |format|
         format.html { redirect_to destination_to_do_path(@to_do.destination_id, @to_do) }
-        format.js { }
+        format.js { @to_dos = ToDo.all }
       end
     else
     end
@@ -14,6 +14,11 @@ class ToDosController < ApplicationController
 
   def show
     @to_do = ToDo.find(params[:id])
+  end
+
+  def index
+    binding.pry
+    @to_dos = Destination.find(params[:destination_id]).to_dos
   end
 
   private

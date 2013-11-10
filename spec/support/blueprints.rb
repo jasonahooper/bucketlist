@@ -13,9 +13,14 @@ end
 ToDo.blueprint do
   name { 'a test todo' }
   image_url { 'image.jpg' }
-  priority { rand(99) }
   where { 'a test location' }
-  latitude { Faker::Country.Latitude }
-  longitude { Faker::Country.Longitude }
   destination_id { Destination.make!.id }
+end
+
+ToDo.blueprint(:low) do
+  priority { 3 }
+end
+
+ToDo.blueprint(:high) do
+  priority { 1 }
 end
