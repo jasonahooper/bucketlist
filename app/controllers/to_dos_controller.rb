@@ -3,12 +3,10 @@ class ToDosController < ApplicationController
   def create
     @to_do = ToDo.new(to_do_params)
     @to_do.destination_id = params[:destination_id]
-    if @to_do.save
-      respond_to do |format|
-        format.html { redirect_to destination_to_do_path(@to_do.destination_id, @to_do) }
-        format.js { @to_dos = ToDo.all }
-      end
-    else
+    @to_do.save!
+    respond_to do |format|
+      format.html { redirect_to destination_to_do_path(@to_do.destination_id, @to_do) }
+      format.js { @to_dos = ToDo.all }
     end
   end
 
@@ -17,7 +15,6 @@ class ToDosController < ApplicationController
   end
 
   def index
-    binding.pry
     @to_dos = Destination.find(params[:destination_id]).to_dos
   end
 

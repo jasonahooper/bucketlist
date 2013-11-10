@@ -1,8 +1,12 @@
-<%= render 'destinations/destination_form' %>
-<div id="destinations">
-  <ul id="destination-list">
-    <% @destinations.each do |d| %>
-      <%= render :partial => 'destinations/destination', :locals => { :destination => d} %>
-    <% end %>
-  </ul>
+<div id="map-area">
+</div>
+<div id="bucket-list">
+  <%= render 'destinations/destination_form' %>
+  <div id="destinations">
+    <ul id="destination-list">
+      <% @destinations.each do |d| %>
+        <%= render :partial => 'destinations/destination', :locals => { :destination => d} %>
+      <% end %>
+    </ul>
+  </div>
 </div>
