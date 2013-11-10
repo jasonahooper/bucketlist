@@ -15,7 +15,14 @@ class ToDosController < ApplicationController
   end
 
   def index
-    @to_dos = Destination.find(params[:destination_id]).to_dos
+    if params[:destination_id] # we are on sub-path
+      @to_dos = Destination.find(params[:destination_id]).to_dos
+    else
+      respond_to do |format|
+        format.json { render :json => Todo.all.as_json(:only =>
+          [:latitude, :longitude, :title]) }
+      end
+    end
   end
 
   private

@@ -5,7 +5,6 @@ $(document).ready(function() {
 });
 
 function myMap() {
-  console.log("here");
   var mapOptions = {
     center: new google.maps.LatLng(-34.397, 150.644),
     zoom: 8,
