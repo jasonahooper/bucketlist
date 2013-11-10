@@ -3,6 +3,7 @@
     <strong> To Do: </strong><%= "#{to_do.name}" %>
     <strong> Priority: </strong><%= "#{to_do.priority}" %>
     <strong> Created: </strong><%= "#{to_do.created_at}" %>
+    <%= link_to "Remove", "#", :class => "remove-todo" %>
   </div>
   <div>
     <%= image_tag to_do.image_url, :class => "to_do-img" %>

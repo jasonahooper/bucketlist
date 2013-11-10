@@ -20,13 +20,14 @@ h1 {
 }
 
 #bucket-list {
-  width: 1000px;
+  width: 1024px;
   margin: auto;
 }
 
 #map-area {
   height:400px;
-  width:100%;
+  width:1024px;
+  margin: 0 auto;
 }
 
 ul, li {
@@ -44,5 +45,5 @@ input {
 }
 
 input[type="submit"] {
-  margin-right: 18px;
+  margin-right: 20px;
 }
