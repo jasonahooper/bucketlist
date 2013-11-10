@@ -20,11 +20,29 @@ h1 {
 }
 
 #bucket-list {
-  margin-right:600px;
+  width: 1000px;
+  margin: auto;
 }
 
 #map-area {
-  height:300px;
+  height:400px;
   width:100%;
-//  float:right;
+}
+
+ul, li {
+  list-style: none;
+}
+
+form {
+  width: 400px;
+  margin-left: 100px;
+}
+
+input {
+  float: right;
+  width: 150px;
+}
+
+input[type="submit"] {
+  margin-right: 18px;
 }

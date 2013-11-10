@@ -1,13 +1,13 @@
 <li id="destination-<%=destination.id%>">
   <div>
-    <h3>Destination: <%= destination.name %> (Sort by
+    <h3>Destination: <%= destination.name %> <br> (Sort by
       <%= link_to "Priority", "#", :class => "sortHeading", :id => "priority-#{destination.id}" %>,
       <%= link_to "ToDo", "#", :class => "sortHeading", :id => "name-#{destination.id}" %>,
       <%= link_to "Recent", "#", :class => "sortHeading", :id => "created_at-#{destination.id}" %>)
     </h3>
   </div>
   <div>
-    <%= image_tag destination.image_url %>
+    <%= image_tag destination.image_url, :class => "destination-img" %>
   </div>
   <ul id="destination-<%=destination.id%>-todos">
     <% unless destination.new_record? %>

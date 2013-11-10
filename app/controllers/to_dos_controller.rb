@@ -16,17 +16,16 @@ class ToDosController < ApplicationController
 
   def index
     if params[:destination_id] # we are on sub-path
+      @destination = Destination.find(params[:destination_id])
       respond_to do |format|
         format.js do
           @to_dos = Destination.
             find(params[:destination_id]).to_dos.order(params[:sort])
-          @to_do = @to_dos.first
         end
         format.html do
           @to_dos = Destination.find(params[:destination_id]).to_dos
         end
         format.json do
-          binding.pry
           render :json => Destination.find(params[:destination_id]).
             to_dos.as_json(:only => [:latitude, :longitude, :name])
         end

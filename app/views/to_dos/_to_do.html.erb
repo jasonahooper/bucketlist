@@ -1,11 +1,10 @@
 <li id="to-do-<%=to_do.id%>">
   <div>
-    <%= "To Do: #{to_do.name}" %>
+    <strong> To Do: </strong><%= "#{to_do.name}" %>
+    <strong> Priority: </strong><%= "#{to_do.priority}" %>
+    <strong> Created: </strong><%= "#{to_do.created_at}" %>
   </div>
   <div>
-    <%= "Priority: #{to_do.priority}" %>
-  </div>
-  <div>
-    <%= image_tag to_do.image_url %>
+    <%= image_tag to_do.image_url, :class => "to_do-img" %>
   </div>
 </li>
