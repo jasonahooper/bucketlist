@@ -20,7 +20,7 @@ class ToDosController < ApplicationController
     else
       respond_to do |format|
         format.json { render :json => ToDo.all.as_json(:only =>
-          [:latitude, :longitude, :title]) }
+          [:latitude, :longitude, :name]) }
       end
     end
   end

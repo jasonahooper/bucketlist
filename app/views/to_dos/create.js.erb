@@ -1,1 +1,2 @@
-$("#destination-<%=@to_do.destination_id%>-todos").html("<%= j(render :partial => 'to_dos/to_dos', :locals => { :to_dos => @to_do.destination.to_dos}) %>")
+$("#destination-<%=@to_do.destination_id%>-todos").html("<%= j(render :partial => 'to_dos/to_dos', :locals => { :to_dos => @to_do.destination.to_dos}) %>");
+plotMarker(<%="#{@to_do.latitude}"%>, <%="#{@to_do.longitude}"%>, '<%="#{@to_do.name}"%>');

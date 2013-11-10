@@ -7,7 +7,7 @@ $(document).ready(function() {
 
 function myMap() {
   var mapOptions = {
-    center: new google.maps.LatLng(-34.397, 150.644),
+    center: new google.maps.LatLng(51.51121389999999, -0.1198244),
     zoom: 8,
     mapTypeId: google.maps.MapTypeId.ROADMAP
   };
@@ -29,12 +29,12 @@ function plotMarkers() {
   });
 };
 
-function plotMarker(lat, lng, title) {
+function plotMarker(lat, lng, name) {
   var latlng = new google.maps.LatLng(lat, lng);
   new google.maps.Marker({
     position: latlng,
     map: map,
-    title: title
+    title: name
   });
   bounds.extend(latlng);
   map.fitBounds(bounds);

@@ -1,18 +1,15 @@
 <li id="destination-<%=destination.id%>">
   <div>
-    <%= destination.name %>
+    <h3>Destination: <%= destination.name %></h3>
   </div>
   <div>
     <%= image_tag destination.image_url %>
   </div>
   <ul id="destination-<%=destination.id%>-todos">
     <% unless destination.new_record? %>
-      <%# destination.to_dos.each do |t| %>
-        <%#= render :partial => 'to_dos/to_do', :locals => { :to_do => t} %>
-      <%# end %>
       <%= render :partial => 'to_dos/to_dos', :locals => { :to_dos => destination.to_dos} %>
+  </ul>
       <% @to_do = ToDo.new %>
       <%= render :partial => 'to_dos/to_do_form', :locals => { :destination => destination, :to_do => @to_do}%>
     <% end %>
-  </ul>
 </li>
