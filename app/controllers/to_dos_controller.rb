@@ -19,7 +19,7 @@ class ToDosController < ApplicationController
       @to_dos = Destination.find(params[:destination_id]).to_dos
     else
       respond_to do |format|
-        format.json { render :json => Todo.all.as_json(:only =>
+        format.json { render :json => ToDo.all.as_json(:only =>
           [:latitude, :longitude, :title]) }
       end
     end
