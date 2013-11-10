@@ -7,7 +7,7 @@
   </div>
   <% unless destination.new_record? %>
     <% destination.to_dos.each do |t| %>
-      <%= render 'to_dos/to_do', :locals => { :to_do => t} %>
+      <%= render :partial => 'to_dos/to_do', :locals => { :to_do => t} %>
     <% end %>
     <% @to_do = ToDo.new %>
     <%= render :partial => 'to_dos/to_do_form', :locals => { :destination => destination, :to_do => @to_do}%>

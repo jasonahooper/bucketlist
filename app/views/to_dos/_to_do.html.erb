@@ -1,6 +1,9 @@
 <li id="to-do-<%=to_do.id%>">
   <div>
-    <%= to_do.name %>
+    <%= "Name: #{to_do.name}" %>
+  </div>
+  <div>
+    <%= "Priority: #{to_do.priority}" %>
   </div>
   <div>
     <%= image_tag to_do.image_url %>

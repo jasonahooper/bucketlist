@@ -24,11 +24,11 @@ ActiveRecord::Schema.define(version: 20131107222341) do
   create_table "to_dos", force: true do |t|
     t.string   "name"
     t.string   "image_url"
-    t.integer  "priority"
+    t.integer  "priority", default: 2
     t.string   "where"
     t.float    "latitude"
     t.float    "longitude"
-    t.integer  "destination_id", default: 2
+    t.integer  "destination_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
