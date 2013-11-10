@@ -2,7 +2,8 @@
   <div>
     <h3>Destination: <%= destination.name %> (Sort by
       <%= link_to "Priority", "#", :class => "sortHeading", :id => "priority-#{destination.id}" %>,
-      <%= link_to "ToDo", "#", :class => "sortHeading", :id => "name-#{destination.id}" %>)
+      <%= link_to "ToDo", "#", :class => "sortHeading", :id => "name-#{destination.id}" %>,
+      <%= link_to "Recent", "#", :class => "sortHeading", :id => "created_at-#{destination.id}" %>)
     </h3>
   </div>
   <div>
