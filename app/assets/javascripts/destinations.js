@@ -9,7 +9,8 @@ $(document).ready(function() {
       $.ajax({
         data: { sort: data},
         url: '/destinations/' + destination + '/to_dos.js',
-        success: function(data) { }
+        success: function(data) { },
+        error: function(data) { }
       });
     return(false);
   })

@@ -38,6 +38,11 @@ class ToDosController < ApplicationController
     end
   end
 
+  def destroy
+    @to_do = ToDo.find(params[:id])
+    @to_do.destroy!
+  end
+
   private
     def to_do_params
       params.require(:to_do).permit(:name, :image_url, :priority, :where,
