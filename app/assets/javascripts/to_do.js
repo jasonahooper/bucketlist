@@ -8,8 +8,8 @@ $(document).ready(function() {
       method: "DELETE",
       url: '/to_dos/' + id + '.js',
       success: function(data) {
-        console.log(data);
-      }
+        console.log(data); },
+      error: function(data) { }
     });
     return(false);
   });
